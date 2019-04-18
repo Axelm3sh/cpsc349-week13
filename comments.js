@@ -30,10 +30,10 @@ var $docObj = $(document.body);
 
 $docObj.ready(function (e) {   
     
-    var rData;
+    
     
     $.ajax({
-        url: "https://jsonplaceholder.typicode.com/",
+        url: "https://jsonplaceholder.typicode.com/posts",
         method: "GET",
         dataType: "json"
     });
