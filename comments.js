@@ -117,9 +117,9 @@ function CreateNewComment(body, name, email, postId) {
     body = body.replace("\n", "<br>");
 
     //TODO LAST OF TYPE
-    $section.find("p").html(body);
-    $section.find("a").attr("href", email);
-    $section.find("a").html(name);
+    $section.find("p").last().html(body);
+    $section.find("a").last().attr("href", email);
+    $section.find("a").last().html(name);
 
 }
 
