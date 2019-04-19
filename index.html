@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <title>Posts and Comments</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/kognise/water.css@latest/dist/light.css">
 </head>
+
 <body>
     <header>
         <h1>Posts and Comments</h1>
     </header>
 
+<!--
     <article>
         <h2 data-posts="title">sunt aut facere repellat provident occaecati excepturi optio reprehenderit</h2>
         <p data-posts="body">
@@ -47,10 +50,10 @@
     <article>
         <h2 data-posts="title">qui est esse</h2>
         <p data-posts="body">
-        est rerum tempore vitae<br>
-        sequi sint nihil reprehenderit dolor beatae ea dolores neque<br>
-        fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis<br>
-        qui aperiam non debitis possimus qui neque nisi nulla
+            est rerum tempore vitae<br>
+            sequi sint nihil reprehenderit dolor beatae ea dolores neque<br>
+            fugiat blanditiis voluptate porro vel nihil molestiae ut reiciendis<br>
+            qui aperiam non debitis possimus qui neque nisi nulla
         </p>
 
         <button data-posts="id" value="2" type="button">Show comments</button>
@@ -77,7 +80,32 @@
             </address>
         </section>
     </article>
+-->
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.js"></script>
     <script src="comments.js"></script>
-</body>
-</html>
+
+    <!--    post template-->
+    <script type="text/html" id="templatePost">
+        <article>
+            <h2 data-posts="title"></h2>
+            <p data-posts="body"></p>
+
+            <button data-posts="id" value="1" type="button">Show comments</button>
+
+            <section class="comments" id="comments-1" hidden>
+                <h3>Comments</h3>
+                
+            </section>
+        </article>
+    </script>
+    <!--commment template-->
+    <script type="text/html" id="templateComment">
+        <p data-comments="body">
+        </p>
+        <address data-comments="name">
+            <a data-comments="email" href="mailto:Eliseo@gardner.biz"></a>
+        </address>
+    </script>
+
+</body></html>
