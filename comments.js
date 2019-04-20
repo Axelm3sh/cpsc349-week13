@@ -141,16 +141,19 @@ function ToggleComments(elem) {
 
             //Should only run first time comment load
             commentSect.slideDown("fast");
+            commentSect.siblings("button").html("Hide comments");
         });
     } else {
         
         if (commentSect.is(":hidden")) 
         {
             commentSect.slideDown("fast");
+            commentSect.siblings("button").html("Hide comments");
         }
         else
         {
             commentSect.slideUp("fast");
+            commentSect.siblings("button").html("Show comments");
         }
     }
 
